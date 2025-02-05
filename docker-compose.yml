@@ -10,6 +10,7 @@ services:
       - N8N_PROTOCOL=${N8N_PROTOCOL:-http}
       - NODE_ENV=production
       - WEBHOOK_URL=${N8N_WEBHOOK_URL:-http://localhost:5679/}
+      - OLLAMA_HOST=http://ollama:11434
     volumes:
       - n8n_data:/home/node/.n8n
     restart: unless-stopped
